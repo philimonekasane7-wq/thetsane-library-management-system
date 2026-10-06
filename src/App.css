@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #3b232e;    /* Deep Chocolate Plum */
+  --accent-color: #9e6b72;     /* Smoky Rose */
+  --accent-hover: #825359;     /* Darker Smoky Rose */
+  --success-color: #2e6b52;    /* Soft Muted Green */
+  --danger-color: #a83b48;     /* Muted Deep Red */
+  --bg-light: #f9f5f6;         /* Very Light Smoky Tint */
+  --border-color: #d1c2c6;     /* Muted Plum/Rose Border */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f3ebed;
+  color: #2a1a21;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #f8e8ec;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e6d3d8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #d9aab2;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(59, 35, 46, 0.08);
+}
+
+.form-card {
+  background: var(--bg-light);
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid var(--border-color);
+}
+
+input, select, button {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button.btn-danger { 
+  background: var(--danger-color); 
+}
+button.btn-danger:hover {
+  background: #8b2d39;
+}
+
+button.btn-success { 
+  background: var(--success-color); 
+}
+button.btn-success:hover {
+  background: #235440;
+}
+
+button.btn-secondary { 
+  background: #6e5a63; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th, .table td {
+  padding: 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  background: #f0e6e8;
+  color: var(--primary-color);
+}
+
+.low-stock-row {
+  background-color: #fdf2f4 !important;
+}
+
+.status-badge {
+  font-weight: bold;
+}
+.status-badge.low { color: var(--danger-color); }
+.status-badge.ok { color: var(--success-color); }
